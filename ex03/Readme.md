@@ -50,8 +50,9 @@
 - **\symbol** - екранира се един символ
 
 **Пример:** 
-`touch "My file with spaces"`
-`echo "Use \"A*\" for the implementation of this task"` - ще покаже кавичките около A*
+* `touch "My file with spaces"`
+
+* `echo "Use \"A*\" for the implementation of this task"` - ще покаже кавичките около A*
 
 ## IV.	Пренасочване на вход и изход
 
