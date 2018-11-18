@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Hello `whoami`!"
+echo "The current date is: `date`"
+echo "Active user sessions in the system: `who | wc -l`"
