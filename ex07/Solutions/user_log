@@ -1,7 +1,0 @@
-#!/bin/bash
-
-until who | grep -q "$1"; do
-    sleep 30
-done
-
-echo The user "$1" has logged in!

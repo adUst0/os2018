@@ -1,9 +1,0 @@
-#!/bin/bash
-
-read -p "Message: " msg
-
-for user in "$@"; do
-    if who | grep -q "$user"; then
-        echo $msg | write "$user"
-    fi
-done

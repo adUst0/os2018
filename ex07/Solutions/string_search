@@ -1,6 +1,0 @@
-#!/bin/bash
-
-read -p "Find string: " str
-for i in "$@"; do
-    echo "${i}: `grep $str "$i" | wc -l`"
-done
