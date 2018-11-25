@@ -27,42 +27,36 @@
 
 ### 1. Създаване на фунцкия
 
-```shell
-function_name () {  
-    списък_команди  
-}
+    function_name () {  
+        списък_команди  
+    }
 
-function function_name {  
-    списък_команди  
-}
-```
+    function function_name {  
+        списък_команди  
+    }
 
 ---
 
 ### 2. Извикване на функция
 
-```shell
-# Create function
-say_hello() {
-    echo Hello World!
-}
+    # Create function
+    say_hello() {
+        echo Hello World!
+    }
 
-# Function invocation
-say_hello # Output: Hello World!
-```
+    # Function invocation
+    say_hello # Output: Hello World!
 
 ---
 
 ### 3. Аргументи към функция
 
-```shell
-say_hello() {
-    echo Hello, $1!
-}
+    say_hello() {
+        echo Hello, $1!
+    }
 
-# Pass argument to a function
-say_hello Student # Output: Hello, Student!
-```
+    # Pass argument to a function
+    say_hello Student # Output: Hello, Student!
 
 ---
 
@@ -72,13 +66,11 @@ say_hello Student # Output: Hello, Student!
 
 Пример:
 
-```shell
-say_hello() {
-    echo Hello, $1!
-    return 5
-    echo "after return" # this line will not be executed
-}
-```
+        say_hello() {
+            echo Hello, $1!
+            return 5
+            echo "after return" # this line will not be executed
+        }
 
 ---
 
@@ -95,20 +87,18 @@ say_hello() {
 
 Пример:
 
-```shell
-myfunc() {
-    x=5
-    local y=7
-}
+    myfunc() {
+        x=5
+        local y=7
+    }
 
-echo "<$x>" # Output: <>
-echo "<$y>" # Output: <>
+    echo "<$x>" # Output: <>
+    echo "<$y>" # Output: <>
 
-myfunc # creates global variable x
+    myfunc # creates global variable x
 
-echo "<$x>" # Output: <5>
-echo "<$y>" # Output: <>
-```
+    echo "<$x>" # Output: <5>
+    echo "<$y>" # Output: <>
 
 ---
 
