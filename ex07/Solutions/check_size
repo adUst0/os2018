@@ -5,7 +5,7 @@ num=$2
 
 if [ -d "$dir" ]; then
     for file in "$dir"/*; do
-        if [[ -f "$file" && `wc -c < "$file"` > $num  ]]; then
+        if [[ -f "$file" && `wc -c < "$file"` -gt $num  ]]; then
             echo $file has more than $num symbols
         fi
     done
