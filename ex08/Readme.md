@@ -19,32 +19,38 @@
 
 ### 1. Създаване на фунцкия
 
-    function_name () {  
-        списък_команди  
-    }
+```shell
+function_name () {  
+    списък_команди  
+}
 
-    function function_name {  
-        списък_команди  
-    }
+function function_name {  
+    списък_команди  
+}
+```
 
 ### 2. Извикване на функция
 
-    # Create function
-    say_hello() {
-        echo Hello World!
-    }
+```shell
+# Create function
+say_hello() {
+    echo Hello World!
+}
 
-    # Function invocation
-    say_hello # Output: Hello World!
+# Function invocation
+say_hello # Output: Hello World!
+```
 
 ### 3. Аргументи към функция
 
-    say_hello() {
-        echo Hello, $1!
-    }
+```shell
+say_hello() {
+    echo Hello, $1!
+}
 
-    # Pass argument to a function
-    say_hello Student # Output: Hello, Student!
+# Pass argument to a function
+say_hello Student # Output: Hello, Student!
+```
 
 ### 4. Return Values
 
@@ -52,11 +58,13 @@
 
 Пример:
 
-        say_hello() {
-            echo Hello, $1!
-            return 5
-            echo "after return" # this line will not be executed
-        }
+```shell
+say_hello() {
+    echo Hello, $1!
+    return 5
+    echo "after return" # this line will not be executed
+}
+```
 
 ### 5. Variable Scope
 
@@ -65,18 +73,20 @@
 
 Пример:
 
-    myfunc() {
-        x=5
-        local y=7
-    }
+```shell
+myfunc() {
+    x=5
+    local y=7
+}
 
-    echo "<$x>" # Output: <>
-    echo "<$y>" # Output: <>
+echo "<$x>" # Output: <>
+echo "<$y>" # Output: <>
 
-    myfunc # creates global variable x
+myfunc # creates global variable x
 
-    echo "<$x>" # Output: <5>
-    echo "<$y>" # Output: <>
+echo "<$x>" # Output: <5>
+echo "<$y>" # Output: <>
+```
 
 ## IV. Важни файлове
 
