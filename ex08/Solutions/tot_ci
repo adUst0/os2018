@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if ls "$1"/*.c > /dev/null 2>&1; then
+    dir1Count=`ls "$1"/*.c | wc -l`
+else
+    dir1Count=0
+fi
+
+if ls "$2"/*.c > /dev/null 2>&1; then
+    dir2Count=`ls "$2"/*.c | wc -l`
+else
+    dir2Count=0
+fi
+
+totalCount=`expr $dir1Count + $dir2Count`
+
+if [ $totalCount -gt 20 ]; then
+    touch tot_ci_out
+    if [ $dir1Count -gt 0 ]; then
+        ls "$1"/*.c > tot_ci_out;
+    fi
+    if [ $dir2Count -gt 0 ]; then
+        ls "$2"/*.c >> tot_ci_out;
+    fi
+    chmod 444 tot_ci_out
+else
+    echo "Total count: $totalCount"
+fi

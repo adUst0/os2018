@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ ! -d ~/"$1" ]; then
+    mkdir ~/"$1"
+fi
+
+otherFilesCount=0
+
+for file in *; do
+    if [ -r "$file" -a -f "$file" ]; then
+        cp "$file" ~/"$1"
+    else
+        otherFilesCount=`expr $otherFilesCount + 1`
+    fi
+done
+
+echo "Other files: $otherFilesCount"
+

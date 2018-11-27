@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if ls "$1"/*.out > /dev/null 2>&1; then
+    dir1Count=`ls "$1"/*.out | wc -l`
+else
+    dir1Count=0
+fi
+
+if ls "$2"/*.out > /dev/null 2>&1; then
+    dir2Count=`ls "$2"/*.out | wc -l`
+else
+    dir2Count=0
+fi
+
+if [ $dir1Count -gt $dir2Count ]; then
+    mkdir subdir
+    echo "Created directory subdir"
+
+    for file in "$1"/*; do
+        if [ -f "$file" ] && [ -r "$file" -a -w "$file" ]; then
+            mv "$file" subdir
+        fi
+    done
+fi
+

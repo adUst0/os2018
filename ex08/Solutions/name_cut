@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for file in "$1"/*.c; do
+    fileLen=`expr length "$file"`
+    baseLen=`expr $fileLen - 2`
+    binName="`expr substr "$file" 1 $baseLen`.exe"
+    gcc $file -o $binName &
+done
+
