@@ -63,7 +63,9 @@
 
 ## II. Команди в Linux
 
-    command [-options] [arguments]
+```shell
+command [-options] [arguments]
+```
 
 `cd dir` – (Change Directory) сменя текущата директория на dir (ако съществува)
 
