@@ -39,11 +39,15 @@
 
 <span>script1.sh</span>
 
-    #!/bin/bash
-    
-    echo "Hello world!"
+```shell
+#!/bin/bash
+
+echo "Hello world!"
+```
 
 Стартиране:
 
-    chmod 777 script1.sh
-    ./script1.sh
+```shell
+chmod 777 script1.sh
+./script1.sh
+```

@@ -26,16 +26,20 @@
 
 Пример:
 
-    if true; false; then echo Yes; else echo No; fi # No
-    if false; true; then echo Yes; else echo No; fi # Yes
+```shell
+if true; false; then echo Yes; else echo No; fi # No
+if false; true; then echo Yes; else echo No; fi # Yes
+```
 
 *Задача*: КП, която приема като аргумент име на потребител и отпечатва съобщение, ако този потребител не съществува:
 
-    if grep "^$1:" /etc/passwd > /dev/null 2>&1; then
-        :
-    else
-        echo "No user $1"
-    fi
+```shell
+if grep "^$1:" /etc/passwd > /dev/null 2>&1; then
+    :
+else
+    echo "No user $1"
+fi
+```
 
 ### 2. Команда test
 
